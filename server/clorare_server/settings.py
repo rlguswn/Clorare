@@ -89,6 +89,16 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 SESSION_COOKIE_AGE = 86400
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
+# SWAGGER SETTINGS
+SWAGGER_SETTINGS = {
+    "DEFAULT_INFO": "clorare_server.urls.api_info",
+    "USE_SESSION_AUTH": False,
+    "VALIDATOR_URL": None,
+    "SECURITY_DEFINITIONS": {
+        "Bearer": {"type": "apiKey", "name": "Authorization", "in": "header"}
+    },
+}
+
 ROOT_URLCONF = 'clorare_server.urls'
 
 TEMPLATES = [
